@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
-import Layout from "../layouts"
+import Layout from "../components/layout"
 
 class PostTemplate extends Component {
   render() {
