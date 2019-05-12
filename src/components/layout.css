@@ -620,3 +620,28 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+#masthead {
+  display: flex;
+  align-items: baseline;
+}
+
+.site-branding {
+  display: flex;
+  align-items: baseline;
+}
+
+.menu-primary-menu-container {
+  flex: 0 0 35%;
+}
+
+#menu-primary-menu {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+#menu-primary-menu a {
+  color: #fff;
+  text-decoration: none;
+}
