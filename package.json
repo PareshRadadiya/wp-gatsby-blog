@@ -16,9 +16,6 @@
     "gatsby-transformer-sharp": "^2.1.1",
     "glamor": "^2.20.40",
     "lodash": "^4.17.10",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-helmet": "^5.2.0",
     "react-icons": "^3.4.0",
     "react-typography": "^0.16.13",
     "typography": "^0.16.16",
@@ -36,9 +33,11 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "predeploy": "gatsby build --prefix-paths"
+    "predeploy": "gatsby build --prefix-paths",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "devDependencies": {
-    "eslint": "^4.1.1"
+    "eslint": "^4.1.1",
+    "gh-pages": "^2.0.1"
   }
 }

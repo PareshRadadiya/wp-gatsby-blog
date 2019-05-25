@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `wp-gatsby-blog`,
   siteMetadata: {
     title: `Gatsby Default Starter`,
     subtitle: `Gatsby Subtitle`,
