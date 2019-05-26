@@ -645,3 +645,7 @@ pre tt:after {
   color: #fff;
   text-decoration: none;
 }
+
+.post-thumbnail {
+  margin-bottom: 2.65em;
+}
