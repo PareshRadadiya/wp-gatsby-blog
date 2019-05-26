@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: `wp-gatsby-blog`,
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    subtitle: `Gatsby Subtitle`,
+    title: `Just another WordPress site`,
+    subtitle: `Gatsby + WordPress`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },

@@ -1,21 +1,47 @@
-import React from "react"
-import { Link } from "gatsby"
-
+import React, { Component } from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Img from "gatsby-image"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-Boss@2/">Go to page 2</Link>
-  </Layout>
-)
+class IndexPage extends Component {
+  render() {
+    const currentPage = this.props.data.wordpressPage
+
+    return (
+      <Layout>
+
+        {
+          currentPage.featured_media &&
+          <div className={`post-thumbnail`}>
+            <Img fluid={currentPage.featured_media.localFile.childImageSharp.fluid} />
+          </div>
+        }
+        
+        <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
+      </Layout>
+    )
+  }
+}
+ 
 
 export default IndexPage
+
+export const homePageQuery = graphql`
+  query {
+    wordpressPage(title: {eq: "Home"}) {
+      title
+      content
+      date(formatString: "MMMM DD, YYYY")
+      featured_media {
+        localFile {
+          childImageSharp {
+            fluid(maxWidth: 1240) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
